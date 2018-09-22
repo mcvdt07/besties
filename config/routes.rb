@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'welcome' => 'pages#home'
   get '/messages' => 'messages#index'
 	get '/messages/new' => 'messages#new'
+	get '/artist' => 'artist#index'
 	
 	post 'messages' => 'messages#create'
 
