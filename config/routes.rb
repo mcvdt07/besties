@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
+  get 'pages/about'
+  get 'pages/faq'
+  get 'pages/contact'
+
   get 'welcome' => 'pages#home'
   get '/messages' => 'messages#index'
 	get '/messages/new' => 'messages#new'
 	get '/artist' => 'artist#index'
 	
 	post 'messages' => 'messages#create'
+	
+	get '/about' => 'pages#about' 
+	get '/faq' => 'pages#faq' 
+	get '/contact' => 'pages#contact' 
 
   get 'home/front'
   get 'home/front'

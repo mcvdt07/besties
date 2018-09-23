@@ -7,6 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><%= link_to "Home", welcome_path %></li>
+      <li><%= link_to "About", about_path %></li>
+      <li><%= link_to "FAQ", faq_path %></li>
+      <li><%= link_to "Messages", messages_path %></li>
+    </ul>
+    <div class="brand_main">
+      <div class="brand_inner">Besties</div>
+    </div>
+  </nav>
 
 <%= yield %>
 
