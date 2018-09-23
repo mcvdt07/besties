@@ -5,21 +5,25 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
   <nav>
-    <ul>
-      <li><%= link_to "Home", welcome_path %></li>
-      <li><%= link_to "About", about_path %></li>
-      <li><%= link_to "FAQ", faq_path %></li>
-      <li><%= link_to "Messages", messages_path %></li>
-    </ul>
-    <div class="brand_main">
+    <div class="brand_main"href="welcome.html">
       <div class="brand_inner">Besties</div>
     </div>
+    <ul>
+      <li><%= link_to "Home", welcome_path %></li>
+      <li><%= link_to "Messages", messages_path %></li>
+      <li><%= link_to "About", about_path %></li>
+      <li><%= link_to "FAQ", faq_path %></li>
+    </ul>
   </nav>
 
 <%= yield %>
+<footer>
+ <p>&copy Machiel van Der Toorn 2018</p> 
+</footer>
 
 </body>
 </html>

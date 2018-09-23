@@ -10,12 +10,16 @@ Rails.application.routes.draw do
 	
 	post 'messages' => 'messages#create'
 	
+
 	get '/about' => 'pages#about' 
 	get '/faq' => 'pages#faq' 
 	get '/contact' => 'pages#contact' 
+	
 
-  get 'home/front'
-  get 'home/front'
+	
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
