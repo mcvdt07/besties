@@ -1,16 +1,9 @@
 <section class="new_message_main">
-  <div class="header">
-    <div class="container">
-      <%= image_tag("message.svg", :alt => "message icon") %>
-      
-    </div>
-  </div>
   <div class="create">
     <div class="container">
       <h2 class="message_heading">Share your Beats with your Besties!</h2>
      	<%= form_for(@message) do |f| %>  
-    		<div class="field"> 
-      		
+    		<div class="field">
       		<%= f.text_area :content %> 
     		</div> 
     		<div class="actions"> 

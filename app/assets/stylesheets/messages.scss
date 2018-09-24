@@ -54,7 +54,14 @@ body {
     border-top-left-radius: 45px;
     border-bottom-right-radius: 45px;
 }
+.actions input:hover{
+  background-color:#4f92ba;
+  
+}
 
+.messages a:hover{
+    background-color: #4f92ba;
+}
 .message {
     background-color: #fff;
     font-weight: 300;
@@ -64,9 +71,11 @@ body {
     border-bottom-right-radius: 45px;
 
 }
-
+.message p{
+  color:#4f92ba;
+}
 p.time {
-  color: #0084d7;
+  color: #ff3d00;
   font-size: 12px;
   margin-top: 12px;
 }
@@ -86,6 +95,7 @@ button:hover {
   background-color: #c24609;
   transition: background-color 0.5s;
 }
+
 
 form label {
   display: block;
