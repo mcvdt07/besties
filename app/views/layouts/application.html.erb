@@ -2,10 +2,45 @@
 <html>
 <head>
   <title>Besties</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Besties | Shuntyard assesment">
+  <meta mane="author" content="Machiel Van Der Toorn">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <a data-js-hide-link="true" href=""></a>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.ico' %>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  
+  <script>
+        new function viewport() {
+            if (/Android|webOS|iPhone|iPod|BlackBerry|bada|iemobile|BB[0-9.,:_-]{2,};/i.test(navigator.userAgent)) {
+                var ww = (window.innerWidth < window.screen.width) ? window.innerWidth : window.screen.width; //get proper width
+                var mw = 680; // min width of site
+                var ratio = ww / mw; //calculate ratio
+                if (ww < mw) { //smaller than minimum size
+                    document.getElementById('Viewport').setAttribute('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=yes, width=' + ww);
+                } else { //regular size
+                    document.getElementById('Viewport').setAttribute('content', 'initial-scale=1.0, maximum-scale=1, minimum-scale=1.0, user-scalable=yes, width=' + ww);
+                }
+            }
+        };
+  </script>
+  
+  <script>
+        $(document).ready(function() {
+            $(".menu_nav").click(function() {
+                $(".menu_nav").toggleClass("open");
+                // $(".mobile_nav_container").toggleClass("show");
+                $(".mobile_nav_ul").toggleClass("show");
+                $(".mobile_nav_ul").toggleClass("fade");
+                $(".menu_line").toggleClass("active");
+            });
+        });
+  </script>
+
 </head>
 <body>
   <nav>
@@ -18,6 +53,21 @@
       <li><%= link_to "About", about_path %></li>
       <li><%= link_to "FAQ", faq_path %></li>
     </ul>
+    
+    <div class="menu_nav">
+                <span class="menu_line"></span>
+                <span class="menu_line"></span>
+                <span class="menu_line"></span>
+            </div>  
+            <div class="mobile_nav_container">
+                <ul class="mobile_nav_ul">
+                   
+                    <li class="mobile_nav_li"><%= link_to "Home", welcome_path %></li>
+                    <li class="mobile_nav_li"><%= link_to "Messages", messages_path %></li>
+                    <li class="mobile_nav_li"><%= link_to "About", about_path %></li>
+                    <li class="mobile_nav_li"><%= link_to "FAQ", faq_path %></li>
+                </ul>
+            </div>   
   </nav>
 
 <%= yield %>

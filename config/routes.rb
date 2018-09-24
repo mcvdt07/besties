@@ -15,6 +15,9 @@ Rails.application.routes.draw do
 	get '/faq' => 'pages#faq' 
 	get '/contact' => 'pages#contact' 
 	
+	get 'signup'  => 'users#new' 
+  resources :users
+	
 
 	
 

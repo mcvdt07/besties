@@ -29,7 +29,7 @@ body {
 .container {
   width: 480px;
   margin: 0 auto;
-  max-height: 60vh;
+
   overflow: hidden;
 }
 
@@ -51,15 +51,18 @@ body {
     text-align: center;
     background-color: #FF3D00;
     padding:20px 45px;
-    border-top-left-radius: 65px;
-    border-bottom-right-radius: 65px;
+    border-top-left-radius: 45px;
+    border-bottom-right-radius: 45px;
 }
 
 .message {
-  background-color: #fff;
-  font-weight: 300;
-  padding: 16px;
-  margin-bottom: 10px;
+    background-color: #fff;
+    font-weight: 300;
+    padding: 16px;
+    margin-bottom: 10px;
+    border-top-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+
 }
 
 p.time {

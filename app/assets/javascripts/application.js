@@ -11,9 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery3
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require home
 
 
 @import "bootstrap-sprockets";
@@ -21,7 +23,20 @@
 @import "font-awesome";
 @import "jquery.datetimepicker";
 @import "*";
+
+$(document).ready(function() {
+            $(".menu_nav").click(function() {
+                $(".menu_nav").toggleClass("open");
+                // $(".mobile_nav_container").toggleClass("show");
+                $(".mobile_nav_ul").toggleClass("show");
+                $(".mobile_nav_ul").toggleClass("fade");
+                $(".menu_line").toggleClass("active");
+            });
+});
+
+
 //= require jquery
+//= require jquery3
 //= require jquery_ujs
 //= require bootstrap
 //= require bindWithDelay
