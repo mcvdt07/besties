@@ -2,14 +2,15 @@
   <div class="header">
     <div class="container">
       <%= image_tag("message.svg", :alt => "message icon") %>
-      <h1>Messenger</h1>
+      
     </div>
   </div>
   <div class="create">
     <div class="container">
+      <h2 class="message_heading">Share your Beats with your Besties!</h2>
      	<%= form_for(@message) do |f| %>  
     		<div class="field"> 
-      		<%= f.label :message %><br> 
+      		
       		<%= f.text_area :content %> 
     		</div> 
     		<div class="actions"> 

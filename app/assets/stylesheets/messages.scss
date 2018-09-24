@@ -97,11 +97,13 @@ form textarea {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 300;
-  margin: 20px 0 10px;
+  margin: 0px 0 10px;
   min-height: 100px;
   padding: 16px;
   transition: border 0.5s;
   width: calc(100% - 32px);
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
 }
 
 form textarea:focus {
